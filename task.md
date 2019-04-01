@@ -97,6 +97,7 @@
 #### 作业
 
 - 项目一：查找重复的电子邮箱（难度：简单）
+      
       创建 email表，并插入如下三行数据
       +----+---------+
       | Id | Email   |
@@ -116,6 +117,7 @@
       说明：所有电子邮箱都是小写字母。
 
 - 项目二：查找大国（难度：简单）
+
       创建如下 World 表
       +-----------------+------------+------------+--------------+---------------+
       | name            | continent  | area       | population   | gdp           |
@@ -142,18 +144,24 @@
 直接将附件code内容复制到cmd或者navicat运行就行。
 
 项目一
+
 -- 创建表
+
       CREATE TABLE email (
       ID INT NOT NULL PRIMARY KEY,
       Email VARCHAR(255)
       );
+
 -- 插入数据
+
       INSERT INTO email VALUES('1','a@b.com');
       INSERT INTO email VALUES('2','c@d.com');
       INSERT INTO email VALUES('3','a@b.com');
 
 项目二
+
 -- 创建表
+
       CREATE TABLE World (
       name VARCHAR(50) NOT NULL,
       continent VARCHAR(50) NOT NULL,
@@ -161,7 +169,9 @@
       population INT NOT NULL,
       gdp INT NOT NULL
       );
+
 -- 插入数据
+
       INSERT INTO World
       VALUES('Afghanistan','Asia',652230,25500100,20343000);
       INSERT INTO World 
@@ -172,3 +182,4 @@
       VALUES('Andorra','Europe',468,78115,3712000);
       INSERT INTO World
       VALUES('Angola','Africa',1246700,20609294,100990000);
+      
