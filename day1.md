@@ -14,6 +14,8 @@
 
 - Navicat：这是一款需要付费的软件，安装可以参考[这个](https://blog.csdn.net/WYpersist/article/details/79834490)。
 
+- 可能的问题：[Navicat for Mysql 报错 1251-连接不成功](https://blog.csdn.net/wshxhghsjjsn/article/details/80459542)
+
 # 二、数据库基础知识
 
 ### 2.1 数据库定义（Database）
