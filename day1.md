@@ -8,6 +8,8 @@
 
 - win10：软件下载地址在[这里](https://dev.mysql.com/downloads/mysql/)，参考教程可以看[这个](http://www.runoob.com/mysql/mysql-install.html)和[这个](https://blog.csdn.net/m0_37788308/article/details/79965378)。
 
+- 可能的错误：[You must reset your password using ALTER USER statement before executing this statement.](https://blog.csdn.net/hj7jay/article/details/65626766)
+
 ### 1.2 图形化界面软件的安装
 
 - Navicat：这是一款需要付费的软件，安装可以参考[这个](https://blog.csdn.net/WYpersist/article/details/79834490)。
