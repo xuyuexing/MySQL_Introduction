@@ -12,7 +12,7 @@
 ### MySQL 软件安装及数据库基础
 
 1. 软件安装及服务器设置。
-   教程 http://www.runoob.com/mysql/mysql-install.htm
+   教程 http://www.runoob.com/mysql/mysql-install.html
 
 2. (选做，但是强烈建议) 使用图形界面软件 Navicat for SQL
    群里提供破解版Navicat for SQL，看群公告或聊天记录搜索888查找。
