@@ -67,19 +67,19 @@
 
 - 解题：
 
-    - 创建表：
-    
-            '''sql
-            CREATE TABLE email (
-                ID INT NOT NULL PRIMARY KEY,
-                Email VARCHAR (255)
-            );
-            '''
+    创建表：
 
-    - 插入数据：
+        ```sql
+        CREATE TABLE email (
+            ID INT NOT NULL PRIMARY KEY,
+            Email VARCHAR (255)
+        );
+        ```
+
+    插入数据：
 
 
-    - 查找：
+    查找：
 
 
 
@@ -106,3 +106,5 @@
         | Afghanistan  | 25500100    | 652230       |
         | Algeria      | 37100000    | 2381741      |
         +--------------+-------------+--------------+
+
+- 解题：
