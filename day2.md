@@ -163,7 +163,7 @@
 
     ```sql
     SELECT
-    	NAME,
+	    NAME,
 	    population,
 	    area
     FROM world
