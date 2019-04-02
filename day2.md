@@ -69,12 +69,12 @@
 
     创建表：
 
-```sql
-CREATE TABLE email (
-    ID INT NOT NULL PRIMARY KEY,
-    Email VARCHAR (255)
-);
-```
+    ```sql
+    CREATE TABLE email (
+        ID INT NOT NULL PRIMARY KEY,
+        Email VARCHAR (255)
+    );
+    ```
 
     插入数据：
 
