@@ -78,10 +78,19 @@
 
     插入数据：
 
+    ```sql
+    INSERT INTO email VALUES('1','a@b.com');
+    INSERT INTO email VALUES('2','c@d.com');
+    INSERT INTO email VALUES('3','a@b.com');
+    ```
 
-    查找：
+    查找重复电子邮箱：
 
-
+    ```sql
+    SELECT Email FROM email
+    GROUP BY Email
+    HAVING count(1) > 1;
+    ```
 
 ### 项目二：查找大国（难度：简单）
 
