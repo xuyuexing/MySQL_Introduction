@@ -125,3 +125,52 @@
         +--------------+-------------+--------------+
 
 - 解题：
+
+    指定数据库（沿用项目一中的test）：
+
+    ```sql
+    USE test;
+    ```
+
+    创建表：
+
+    ```sql
+    CREATE TABLE World (
+        NAME VARCHAR (50) NOT NULL,
+        continent VARCHAR (50) NOT NULL,
+        area INT NOT NULL,
+        population INT NOT NULL,
+        gdp INT NOT NULL
+    );
+    ```
+
+    插入数据：
+
+    ```sql
+    INSERT INTO World
+    VALUES('Afghanistan','Asia',652230,25500100,20343000);
+    INSERT INTO World 
+    VALUES('Albania','Europe',28748,2831741,12960000);
+    INSERT INTO World 
+    VALUES('Algeria','Africa',2381741,37100000,188681000);
+    INSERT INTO World
+    VALUES('Andorra','Europe',468,78115,3712000);
+    INSERT INTO World
+    VALUES('Angola','Africa',1246700,20609294,100990000);
+    ```
+
+    输出表中所有大国家的名称、人口和面积
+
+    ```sql
+    SELECT
+    	NAME,
+	    population,
+	    area
+    FROM world
+    WHERE
+        area > 3000000
+    OR (
+        population > 25000000
+        AND gdp > 20000000
+    );
+    ```
