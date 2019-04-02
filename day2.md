@@ -68,7 +68,7 @@
 - 解题：
 
     创建并指定数据库：
-
+    
     ```sql
     CREATE DATABASE
     IF NOT EXISTS test DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
