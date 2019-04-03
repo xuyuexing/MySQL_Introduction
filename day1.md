@@ -10,11 +10,11 @@
 
 - 可能的错误：[You must reset your password using ALTER USER statement before executing this statement.](https://blog.csdn.net/hj7jay/article/details/65626766)
 
+- 其他错误建议直接[彻底卸载MySQL](https://blog.csdn.net/weixin_42369926/article/details/81042133)并重装。
+
 ### 1.2 图形化界面软件的安装
 
 - Navicat：这是一款需要付费的软件，安装可以参考[这个](https://blog.csdn.net/WYpersist/article/details/79834490)。
-
-- 可能的问题：[Navicat for Mysql 报错 1251-连接不成功](https://blog.csdn.net/wshxhghsjjsn/article/details/80459542)
 
 # 二、数据库基础知识
 
