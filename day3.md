@@ -85,49 +85,49 @@
 
 - 解题：
 
-        指定数据库（沿用项目一中的test）：
+    指定数据库（沿用项目一中的test）：
 
-        ```sql
-        USE test;
-        ```
+    ```sql
+    USE test;
+    ```
 
-        创建表：
+    创建表：
 
-        ```sql
-        CREATE TABLE courses (
-        student VARCHAR (50) NOT NULL,
-        class VARCHAR (50) NOT NULL
-        );
-        ```
+    ```sql
+    CREATE TABLE courses (
+    student VARCHAR (50) NOT NULL,
+    class VARCHAR (50) NOT NULL
+    );
+    ```
 
-        插入数据：
+    插入数据：
 
-        ```sql
-        INSERT INTO courses VALUES('A','Math');
-        INSERT INTO courses VALUES('B','English');  
-        INSERT INTO courses VALUES('C','Math');
-        INSERT INTO courses VALUES('D','Biology');
-        INSERT INTO courses VALUES('E','Math');
-        INSERT INTO courses VALUES('F','Computer');
-        INSERT INTO courses VALUES('G','Math');
-        INSERT INTO courses VALUES('H','Math');
-        INSERT INTO courses VALUES('I','Math');
-        INSERT INTO courses VALUES('A','Math');
-        ```
+    ```sql
+    INSERT INTO courses VALUES('A','Math');
+    INSERT INTO courses VALUES('B','English');  
+    INSERT INTO courses VALUES('C','Math');
+    INSERT INTO courses VALUES('D','Biology');
+    INSERT INTO courses VALUES('E','Math');
+    INSERT INTO courses VALUES('F','Computer');
+    INSERT INTO courses VALUES('G','Math');
+    INSERT INTO courses VALUES('H','Math');
+    INSERT INTO courses VALUES('I','Math');
+    INSERT INTO courses VALUES('A','Math');
+    ```
 
-        查找>=5行的课程：
+    查找>=5行的课程：
 
-        ```sql
-        SELECT t.class
-        FROM
-        (
-        SELECT DISTINCT student, class
-        FROM courses
-        ) AS t     -- 确保同一个课程，没有重复的学生
-        GROUP BY class
-        HAVING count(class) >= 5
-        ;
-        ```
+    ```sql
+    SELECT t.class
+    FROM
+    (
+    SELECT DISTINCT student, class
+    FROM courses
+    ) AS t     -- 确保同一个课程，没有重复的学生
+    GROUP BY class
+    HAVING count(class) >= 5
+    ;
+    ```
 
 ### 项目四：交换工资（难度：简单）
 
@@ -153,35 +153,35 @@
 
 - 解题：
 
-        指定数据库（沿用项目一中的test）：
+    指定数据库（沿用项目一中的test）：
 
-        ```sql
-        USE test;
-        ```
+    ```sql
+    USE test;
+    ```
 
-        创建表：
+    创建表：
 
-        ```sql
-        CREATE TABLE salary (
-        id INT NOT NULL PRIMARY KEY,
-        name VARCHAR (50) NOT NULL,
-        sex VARCHAR (50) NOT NULL,
-        salary INT NOT NULL
-        );
-        ```
+    ```sql
+    CREATE TABLE salary (
+    id INT NOT NULL PRIMARY KEY,
+    name VARCHAR (50) NOT NULL,
+    sex VARCHAR (50) NOT NULL,
+    salary INT NOT NULL
+    );
+    ```
 
-        插入数据：
+    插入数据：
 
-        ```sql
-        INSERT INTO salary VALUES(1,'A','m',2500);
-        INSERT INTO salary VALUES(2,'B','f',1500);
-        INSERT INTO salary VALUES(3,'C','m',5500);
-        INSERT INTO salary VALUES(4,'D','f',500);
-        ```
+    ```sql
+    INSERT INTO salary VALUES(1,'A','m',2500);
+    INSERT INTO salary VALUES(2,'B','f',1500);
+    INSERT INTO salary VALUES(3,'C','m',5500);
+    INSERT INTO salary VALUES(4,'D','f',500);
+    ```
 
-        交换所有的f和m的值：
+    交换所有的f和m的值：
 
-        ```sql
-        UPDATE salary SET sex= (CASE WHEN sex = 'm' THEN 'f' ELSE 'm' END);
-        SELECT * FROM salary;
-        ```
+    ```sql
+    UPDATE salary SET sex= (CASE WHEN sex = 'm' THEN 'f' ELSE 'm' END);
+    SELECT * FROM salary;
+    ```
