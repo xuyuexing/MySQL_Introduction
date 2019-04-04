@@ -8,11 +8,47 @@
 
 ### 2.2 SQL基础查询语句
 
+1. MySQL表数据类型
+ 
+2. 用SQL语句创建表
+    语句解释
+    设定列类型 、大小、约束
+    设定主键
 
+3. 用SQL语句向表中添加数据
+    语句解释
+    多种添加方式（指定列名；不指定列名）
+
+4. 用SQL语句删除表
+    语句解释
+    DELETE
+    DROP
+    TRUNCATE
+    不同方式的区别
+
+5. 用SQL语句修改表
+    修改列名
+    修改表中数据
+    删除行
+    删除列
+    新建列
+    新建行
 
 # 二、MySQL 基础 （三）- 表联结
 
+1. MySQL别名
 
+2. INNER JOIN
+
+3. LEFT JOIN
+
+4. CROSS JOIN
+
+5. 自连接
+
+6. UNION
+
+7. 以上几种方式的区别和联系
 
 # 三、作业
 
@@ -49,6 +85,50 @@
 
 - 解题：
 
+        指定数据库（沿用项目一中的test）：
+
+        ```sql
+        USE test;
+        ```
+
+        创建表：
+
+        ```sql
+        CREATE TABLE courses (
+        student VARCHAR (50) NOT NULL,
+        class VARCHAR (50) NOT NULL
+        );
+        ```
+
+        插入数据：
+
+        ```sql
+        INSERT INTO courses VALUES('A','Math');
+        INSERT INTO courses VALUES('B','English');  
+        INSERT INTO courses VALUES('C','Math');
+        INSERT INTO courses VALUES('D','Biology');
+        INSERT INTO courses VALUES('E','Math');
+        INSERT INTO courses VALUES('F','Computer');
+        INSERT INTO courses VALUES('G','Math');
+        INSERT INTO courses VALUES('H','Math');
+        INSERT INTO courses VALUES('I','Math');
+        INSERT INTO courses VALUES('A','Math');
+        ```
+
+        查找>=5行的课程：
+
+        ```sql
+        SELECT t.class
+        FROM
+        (
+        SELECT DISTINCT student, class
+        FROM courses
+        ) AS t     -- 确保同一个课程，没有重复的学生
+        GROUP BY class
+        HAVING count(class) >= 5
+        ;
+        ```
+
 ### 项目四：交换工资（难度：简单）
 
 - 题目：
@@ -72,3 +152,36 @@
         | 4  | D    | m   | 500    |
 
 - 解题：
+
+        指定数据库（沿用项目一中的test）：
+
+        ```sql
+        USE test;
+        ```
+
+        创建表：
+
+        ```sql
+        CREATE TABLE salary (
+        id INT NOT NULL PRIMARY KEY,
+        name VARCHAR (50) NOT NULL,
+        sex VARCHAR (50) NOT NULL,
+        salary INT NOT NULL
+        );
+        ```
+
+        插入数据：
+
+        ```sql
+        INSERT INTO salary VALUES(1,'A','m',2500);
+        INSERT INTO salary VALUES(2,'B','f',1500);
+        INSERT INTO salary VALUES(3,'C','m',5500);
+        INSERT INTO salary VALUES(4,'D','f',500);
+        ```
+
+        交换所有的f和m的值：
+
+        ```sql
+        UPDATE salary SET sex= (CASE WHEN sex = 'm' THEN 'f' ELSE 'm' END);
+        SELECT * FROM salary;
+        ```
